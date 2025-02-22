@@ -14,10 +14,27 @@
                 <img src="assets/wordmark (5).svg" rel="wordmark" >
             </div>
             <form action="" method="get">
-                <input type="text">
-                <input type="text">
-                <input type="number">
-                <input type="checkbox">
+                <label for="title">
+                    <span>Title of the book: </span><br>
+                    <input id="title" type="text">
+               </label>
+               <label for="author">
+                    <span>Author of the book: </span><br>
+                    <input id="author" type="text">
+                </label>
+                <label for="pages">
+                    <span>Number of pages: </span><br>
+                    <input id="pages" type="number">
+                </label>
+                <label for="pages">
+                    <span>Number of pages: </span><br>
+                    <input id="pages" type="number">
+                </label>
+                <label for="read">
+                    <input type="checkbox" id="read" name="completed" value="read">
+                    <span>Did you finished the book? </span>
+                </label>
+                <button type="submit">Add New Book</button>
             </form>
             <div class="credits"></div>
         </aside>

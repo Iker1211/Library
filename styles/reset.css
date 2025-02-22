@@ -26,9 +26,6 @@
   }
 
   /* This one is mine */
-  input, input[type="checkbox"], input[type="search"], input[type="radio"] {
-    appearance: none;
-  }
   
   p, h1, h2, h3, h4, h5, h6 {
     overflow-wrap: break-word;
