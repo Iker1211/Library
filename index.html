@@ -6,9 +6,11 @@
     <title>TOP Library</title>
     <link rel="stylesheet" href="styles/reset.css">
     <link rel="stylesheet" href="styles/style.css">
+    <script rel="script" type="text/javascript" src="script.js" ></script>
 </head>
 <body>
     <div class="container">
+        <p id="bg-credits">By <a href="https://unsplash.com/es/@ryunosuke_kikuno" rel="noreferrer" target="_blank">Ryunosuke Kikuno</a> in  <a href="https://unsplash.com/es" rel="noreferrer" target="_blank">Unsplash</a></p>
         <aside>
             <div class="logo-container">
                 <img src="assets/wordmark (5).svg" rel="wordmark" >
@@ -16,22 +18,18 @@
             <form action="" method="get">
                 <label for="title">
                     <span>Title of the book: </span><br>
-                    <input id="title" type="text">
+                    <input id="title" type="text" required pattern="/^(?!\s)(?!.*\s{2})[A-Za-z0-9\s\-:'",\.!?&()]{1,200}(?<!\s)$/">
                </label>
                <label for="author">
                     <span>Author of the book: </span><br>
-                    <input id="author" type="text">
+                    <input id="author" type="text" required pattern="/^(?!\s)(?!.*\s{2})[A-Za-z0-9\s\-:'",\.!?&()]{1,200}(?<!\s)$/">
                 </label>
                 <label for="pages">
                     <span>Number of pages: </span><br>
-                    <input id="pages" type="number">
-                </label>
-                <label for="pages">
-                    <span>Number of pages: </span><br>
-                    <input id="pages" type="number">
+                    <input id="pages" type="number" required min="10">
                 </label>
                 <label for="read">
-                    <input type="checkbox" id="read" name="completed" value="read">
+                    <input type="checkbox" id="read" name="completed" value="read" required>
                     <span>Did you finished the book? </span>
                 </label>
                 <button type="submit">Add New Book</button>
