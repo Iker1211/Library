@@ -8,7 +8,7 @@
     integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" rel="stylesheet">
     <link rel="stylesheet" href="styles/reset.css">
     <link rel="stylesheet" href="styles/style.css">
-    <script rel="script" type="text/javascript" src="script.js" ></script>
+    <script rel="script" type="text/javascript" src="script.js" defer ></script>
 </head>
 <body>
     <div class="container">
@@ -20,11 +20,11 @@
             <form action="" method="get">
                 <label for="title">
                     <span>Title of the book </span><br>
-                    <input id="title" type="text" required pattern="/^(?!\s)(?!.*\s{2})[A-Za-z0-9\s\-:'",\.!?&()]{1,200}(?<!\s)$/">
+                    <input id="title" type="text" required maxlength="100">
                </label>
                <label for="author">
                     <span>Author of the book </span><br>
-                    <input id="author" type="text" required pattern="/^(?!\s)(?!.*\s{2})[A-Za-z0-9\s\-:'",\.!?&()]{1,200}(?<!\s)$/">
+                    <input id="author" type="text" required pattern="^[A-Za-zÀ-ÿ][A-Za-zÀ-ÿ\s.'\-]{0,98}[A-Za-zÀ-ÿ]$">
                 </label>
                 <label for="pages">
                     <span>Number of pages </span><br>
@@ -34,7 +34,7 @@
                     <input type="checkbox" id="read" name="completed" value="read" required>
                     <span>Did you finished the book? </span>
                 </label>
-                <button type="submit">Add New Book</button>
+                <button type="submit" id="add-book">Add New Book</button>
             </form>
             <div class="credits"></div>
         </aside>
