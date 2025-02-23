@@ -42,7 +42,7 @@ body {
      grid-template-areas: 
     "sidebar main";
 
-    & > #bg-credits { /*Violet */
+    & > #bg-credits { 
         font-size: 0.7em;
         position: absolute;
         bottom: 1%;
@@ -71,6 +71,10 @@ aside {
         flex-direction: column;
         justify-items: center;
 
+        & label:not(label:last-of-type) {
+            text-align: right;
+        }
+
         & input:not(input[type="checkbox"]), & button {
             width: 100%;
             border-radius: 10px;
@@ -83,11 +87,6 @@ aside {
         & input:focus:valid {
             border: 3px solid green;
             background-color: color-mix(in srgb, var(--green), transparent 80%);
-        }
-
-        & input:focus:invalid {
-            border: 3px solid red;
-            background-color: color-mix(in srgb, var(--red), transparent 80%);
         }
 
         &  input:user-invalid {
@@ -108,7 +107,59 @@ aside {
 }
 
 main {
-    /* height: 100%; */
     grid-area: main;
-    /* background-color: var(--violet); */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+
+    & > table {
+        width: 95%;
+        border-spacing: 0;
+        border: 1px solid black;
+
+        & .delete-btn {
+            background-color: transparent;
+            border: none;
+        }
+
+        & .delete-btn:hover {
+            cursor: pointer;
+        }
+
+        & > tbody, & > thead {
+            display: block;
+        }
+
+        & tr {
+            display: flex;
+            flex-direction: row;
+            flex: 1 1 auto;
+
+            & > .t-data, .col-head {
+                width: 20%;
+                text-align: center;
+            }
+
+            & > .t-data:not(.t-data:last-of-type) {
+                border-right: 2px solid black;
+            }
+        }
+
+        & > tbody {
+            height: 300px;
+            overflow-y: auto;
+            overflow-x: hidden;
+        }
+
+        & > tbody::-webkit-scrollbar {
+            width: 10px;
+        }
+
+        & > tbody::-webkit-scrollbar-thumb {
+            background-color: var(--gray);
+            border-radius: 10px;
+        }
+    }
 }
+
