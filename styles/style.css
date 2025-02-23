@@ -12,17 +12,8 @@
     --font-size-base: 1rem;
 }
 
-@font-face {
-    font-family: 'cormorant_garamond';
-    src: url(../assets/fonts/Cormorant-Garamond-Regular.woff2) format(woff2);
-}
-
 * {
     box-sizing: border-box;
-}
-
-html {
-    font-family: 'cormorant_garamond';
 }
 
 body {
@@ -117,16 +108,6 @@ main {
         width: 95%;
         border-spacing: 0;
         border: 1px solid black;
-
-        & .delete-btn {
-            background-color: var(--red);
-            border-radius: 15%;
-            border: none;
-        }
-
-        & .delete-btn:hover {
-            cursor: pointer;
-        }
 
         & > tbody, & > thead {
             display: block;
