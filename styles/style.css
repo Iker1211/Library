@@ -163,3 +163,12 @@ main {
     }
 }
 
+@media only screen and (max-width: 760px) {
+
+    .container {
+        grid-template: 1fr 1fr / 1fr;
+        grid-template-areas:
+        'sidebar'
+        'main';
+    }
+}
