@@ -113,24 +113,23 @@ main {
             display: block;
         }
 
-        & #trow {
+        & tr {
             width: 100%;
             display: flex;
             flex-direction: row;
             flex: 1 1 auto;
 
-            & > .t-data, .col-head {
+            & > td, & > th {
                 width: 20%;
                 text-align: center;
             }
 
-            & > .t-data:not(.t-data:last-of-type) {
+            & > td:not(.t-data:last-of-type) {
                 border-right: 2px solid black;
             }
         }
 
         & > tbody {
-            min-height: 50vh;
             max-height: 50vh;
             overflow-y: auto;
             overflow-x: hidden;
