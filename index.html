@@ -17,7 +17,7 @@
             <div class="logo-container">
                 <img src="assets/wordmark (5).svg" rel="wordmark" >
             </div>
-            <form action="" method="get">
+            <form id="form" action="" method="get">
                 <label for="title">
                     <span>Title of the book </span><br>
                     <input id="title" type="text" required maxlength="100">
@@ -34,7 +34,7 @@
                     <input type="checkbox" id="read" name="completed" value="read" required>
                     <span>Did you finished the book? </span>
                 </label>
-                <button type="submit" id="add-book">Add New Book</button>
+                <button type="submit">Add New Book</button>
             </form>
             <div class="credits"></div>
         </aside>
@@ -42,9 +42,9 @@
             <div class="library-info">
                 so-right, so good
             </div>
-            <table class="table table-light table-hover">
+            <!-- <table class="table table-light table-hover">
                 <thead class="thead-dark">
-                <tr>
+                <tr id="trow">
                     <th class="col-head" scope="col">Title</th>
                     <th class="col-head" scope="col">Author</th>
                     <th class="col-head" scope="col">Number of Pages</th>
@@ -52,200 +52,16 @@
                     <th class="col-head" scope="col">Remove</th>
                 </tr>
                 </thead>
-                <tbody>
-                    <tr>
-                        <td class="t-data">Helo</td>
-                        <td class="t-data">Helo</td>
-                        <td class="t-data">Helo</td>
-                        <td class="t-data"><p><button class="btn btn-success"><img src="./assets/icons/check.svg" rel="check" width="20vw" height="auto"></button></p></td>
-                        <td class="t-data"><p><button class="btn btn-danger"><img src="./assets/icons/trash.svg" rel="delete" width="20vw" height="auto"></button></p></td>
+                <tbody id="tbody">
+                    <tr id="trow">
+                        <td class="t-data">hola</td>
+                        <td class="t-data">hola</td>
+                        <td class="t-data">hola</td>
+                        <td class="t-data">hola</td>
+                        <td class="t-data">hola</td>
                     </tr>
-                    <tr>
-                        <td class="t-data">Helo</td>
-                        <td class="t-data">Helo</td>
-                        <td class="t-data">Helo</td>
-                        <td class="t-data"><p><button class="btn btn-success"><img src="./assets/icons/check.svg" rel="check" width="20vw" height="auto"></button></p></td>
-                        <td class="t-data"><p><button class="btn btn-danger"><img src="./assets/icons/trash.svg" rel="delete" width="20vw" height="auto"></button></p></td>
-                    </tr>
-                    <tr>
-                        <td class="t-data">Helo</td>
-                        <td class="t-data">Helo</td>
-                        <td class="t-data">Helo</td>
-                        <td class="t-data"><p><button class="btn btn-success"><img src="./assets/icons/check.svg" rel="check" width="20vw" height="auto"></button></p></td>
-                        <td class="t-data"><p><button class="btn btn-danger"><img src="./assets/icons/trash.svg" rel="delete" width="20vw" height="auto"></button></p></td>
-                    </tr>
-                    <tr>
-                        <td class="t-data">Helo</td>
-                        <td class="t-data">Helo</td>
-                        <td class="t-data">Helo</td>
-                        <td class="t-data"><p><button class="btn btn-success"><img src="./assets/icons/check.svg" rel="check" width="20vw" height="auto"></button></p></td>
-                        <td class="t-data"><p><button class="btn btn-danger"><img src="./assets/icons/trash.svg" rel="delete" width="20vw" height="auto"></button></p></td>
-                    </tr>
-                    <tr>
-                        <td class="t-data">Helo</td>
-                        <td class="t-data">Helo</td>
-                        <td class="t-data">Helo</td>
-                        <td class="t-data"><p><button class="btn btn-success"><img src="./assets/icons/check.svg" rel="check" width="20vw" height="auto"></button></p></td>
-                        <td class="t-data"><p><button class="btn btn-danger"><img src="./assets/icons/trash.svg" rel="delete" width="20vw" height="auto"></button></p></td>
-                    </tr>
-                    <tr>
-                        <td class="t-data">Helo</td>
-                        <td class="t-data">Helo</td>
-                        <td class="t-data">Helo</td>
-                        <td class="t-data"><p><button class="btn btn-success"><img src="./assets/icons/check.svg" rel="check" width="20vw" height="auto"></button></p></td>
-                        <td class="t-data"><p><button class="btn btn-danger"><img src="./assets/icons/trash.svg" rel="delete" width="20vw" height="auto"></button></p></td>
-                    </tr>
-                    <tr>
-                        <td class="t-data">Helo</td>
-                        <td class="t-data">Helo</td>
-                        <td class="t-data">Helo</td>
-                        <td class="t-data"><p><button class="btn btn-success"><img src="./assets/icons/check.svg" rel="check" width="20vw" height="auto"></button></p></td>
-                        <td class="t-data"><p><button class="btn btn-danger"><img src="./assets/icons/trash.svg" rel="delete" width="20vw" height="auto"></button></p></td>
-                    </tr>
-                    <tr>
-                        <td class="t-data">Helo</td>
-                        <td class="t-data">Helo</td>
-                        <td class="t-data">Helo</td>
-                        <td class="t-data"><p><button class="btn btn-success"><img src="./assets/icons/check.svg" rel="check" width="20vw" height="auto"></button></p></td>
-                        <td class="t-data"><p><button class="btn btn-danger"><img src="./assets/icons/trash.svg" rel="delete" width="20vw" height="auto"></button></p></td>
-                    </tr>
-                    <tr>
-                        <td class="t-data">Helo</td>
-                        <td class="t-data">Helo</td>
-                        <td class="t-data">Helo</td>
-                        <td class="t-data"><p><button class="btn btn-success"><img src="./assets/icons/check.svg" rel="check" width="20vw" height="auto"></button></p></td>
-                        <td class="t-data"><p><button class="btn btn-danger"><img src="./assets/icons/trash.svg" rel="delete" width="20vw" height="auto"></button></p></td>
-                    </tr>
-                    <tr>
-                        <td class="t-data">Helo</td>
-                        <td class="t-data">Helo</td>
-                        <td class="t-data">Helo</td>
-                        <td class="t-data"><p><button class="btn btn-success"><img src="./assets/icons/check.svg" rel="check" width="20vw" height="auto"></button></p></td>
-                        <td class="t-data"><p><button class="btn btn-danger"><img src="./assets/icons/trash.svg" rel="delete" width="20vw" height="auto"></button></p></td>
-                    </tr>
-                    <tr>
-                        <td class="t-data">Helo</td>
-                        <td class="t-data">Helo</td>
-                        <td class="t-data">Helo</td>
-                        <td class="t-data"><p><button class="btn btn-success"><img src="./assets/icons/check.svg" rel="check" width="20vw" height="auto"></button></p></td>
-                        <td class="t-data"><p><button class="btn btn-danger"><img src="./assets/icons/trash.svg" rel="delete" width="20vw" height="auto"></button></p></td>
-                    </tr>
-                    <tr>
-                        <td class="t-data">Helo</td>
-                        <td class="t-data">Helo</td>
-                        <td class="t-data">Helo</td>
-                        <td class="t-data"><p><button class="btn btn-success"><img src="./assets/icons/check.svg" rel="check" width="20vw" height="auto"></button></p></td>
-                        <td class="t-data"><p><button class="btn btn-danger"><img src="./assets/icons/trash.svg" rel="delete" width="20vw" height="auto"></button></p></td>
-                    </tr>
-                    <tr>
-                        <td class="t-data">Helo</td>
-                        <td class="t-data">Helo</td>
-                        <td class="t-data">Helo</td>
-                        <td class="t-data"><p><button class="btn btn-success"><img src="./assets/icons/check.svg" rel="check" width="20vw" height="auto"></button></p></td>
-                        <td class="t-data"><p><button class="btn btn-danger"><img src="./assets/icons/trash.svg" rel="delete" width="20vw" height="auto"></button></p></td>
-                    </tr>
-                    <tr>
-                        <td class="t-data">Helo</td>
-                        <td class="t-data">Helo</td>
-                        <td class="t-data">Helo</td>
-                        <td class="t-data"><p><button class="btn btn-success"><img src="./assets/icons/check.svg" rel="check" width="20vw" height="auto"></button></p></td>
-                        <td class="t-data"><p><button class="btn btn-danger"><img src="./assets/icons/trash.svg" rel="delete" width="20vw" height="auto"></button></p></td>
-                    </tr>
-                    <tr>
-                        <td class="t-data">Helo</td>
-                        <td class="t-data">Helo</td>
-                        <td class="t-data">Helo</td>
-                        <td class="t-data"><p><button class="btn btn-success"><img src="./assets/icons/check.svg" rel="check" width="20vw" height="auto"></button></p></td>
-                        <td class="t-data"><p><button class="btn btn-danger"><img src="./assets/icons/trash.svg" rel="delete" width="20vw" height="auto"></button></p></td>
-                    </tr>
-                    <tr>
-                        <td class="t-data">Helo</td>
-                        <td class="t-data">Helo</td>
-                        <td class="t-data">Helo</td>
-                        <td class="t-data"><p><button class="btn btn-success"><img src="./assets/icons/check.svg" rel="check" width="20vw" height="auto"></button></p></td>
-                        <td class="t-data"><p><button class="btn btn-danger"><img src="./assets/icons/trash.svg" rel="delete" width="20vw" height="auto"></button></p></td>
-                    </tr>
-                    <tr>
-                        <td class="t-data">Helo</td>
-                        <td class="t-data">Helo</td>
-                        <td class="t-data">Helo</td>
-                        <td class="t-data"><p><button class="btn btn-success"><img src="./assets/icons/check.svg" rel="check" width="20vw" height="auto"></button></p></td>
-                        <td class="t-data"><p><button class="btn btn-danger"><img src="./assets/icons/trash.svg" rel="delete" width="20vw" height="auto"></button></p></td>
-                    </tr>
-                    <tr>
-                        <td class="t-data">Helo</td>
-                        <td class="t-data">Helo</td>
-                        <td class="t-data">Helo</td>
-                        <td class="t-data"><p><button class="btn btn-success"><img src="./assets/icons/check.svg" rel="check" width="20vw" height="auto"></button></p></td>
-                        <td class="t-data"><p><button class="btn btn-danger"><img src="./assets/icons/trash.svg" rel="delete" width="20vw" height="auto"></button></p></td>
-                    </tr>
-                    <tr>
-                        <td class="t-data">Helo</td>
-                        <td class="t-data">Helo</td>
-                        <td class="t-data">Helo</td>
-                        <td class="t-data"><p><button class="btn btn-success"><img src="./assets/icons/check.svg" rel="check" width="20vw" height="auto"></button></p></td>
-                        <td class="t-data"><p><button class="btn btn-danger"><img src="./assets/icons/trash.svg" rel="delete" width="20vw" height="auto"></button></p></td>
-                    </tr>
-                    <tr>
-                        <td class="t-data">Helo</td>
-                        <td class="t-data">Helo</td>
-                        <td class="t-data">Helo</td>
-                        <td class="t-data"><p><button class="btn btn-success"><img src="./assets/icons/check.svg" rel="check" width="20vw" height="auto"></button></p></td>
-                        <td class="t-data"><p><button class="btn btn-danger"><img src="./assets/icons/trash.svg" rel="delete" width="20vw" height="auto"></button></p></td>
-                    </tr>
-                    <tr>
-                        <td class="t-data">Helo</td>
-                        <td class="t-data">Helo</td>
-                        <td class="t-data">Helo</td>
-                        <td class="t-data"><p><button class="btn btn-success"><img src="./assets/icons/check.svg" rel="check" width="20vw" height="auto"></button></p></td>
-                        <td class="t-data"><p><button class="btn btn-danger"><img src="./assets/icons/trash.svg" rel="delete" width="20vw" height="auto"></button></p></td>
-                    </tr>
-                    <tr>
-                        <td class="t-data">Helo</td>
-                        <td class="t-data">Helo</td>
-                        <td class="t-data">Helo</td>
-                        <td class="t-data"><p><button class="btn btn-success"><img src="./assets/icons/check.svg" rel="check" width="20vw" height="auto"></button></p></td>
-                        <td class="t-data"><p><button class="btn btn-danger"><img src="./assets/icons/trash.svg" rel="delete" width="20vw" height="auto"></button></p></td>
-                    </tr>
-                    <tr>
-                        <td class="t-data">Helo</td>
-                        <td class="t-data">Helo</td>
-                        <td class="t-data">Helo</td>
-                        <td class="t-data"><p><button class="btn btn-success"><img src="./assets/icons/check.svg" rel="check" width="20vw" height="auto"></button></p></td>
-                        <td class="t-data"><p><button class="btn btn-danger"><img src="./assets/icons/trash.svg" rel="delete" width="20vw" height="auto"></button></p></td>
-                    </tr>
-                    <tr>
-                        <td class="t-data">Helo</td>
-                        <td class="t-data">Helo</td>
-                        <td class="t-data">Helo</td>
-                        <td class="t-data"><p><button class="btn btn-success"><img src="./assets/icons/check.svg" rel="check" width="20vw" height="auto"></button></p></td>
-                        <td class="t-data"><p><button class="btn btn-danger"><img src="./assets/icons/trash.svg" rel="delete" width="20vw" height="auto"></button></p></td>
-                    </tr>
-                    <tr>
-                        <td class="t-data">Helo</td>
-                        <td class="t-data">Helo</td>
-                        <td class="t-data">Helo</td>
-                        <td class="t-data"><p><button class="btn btn-success"><img src="./assets/icons/check.svg" rel="check" width="20vw" height="auto"></button></p></td>
-                        <td class="t-data"><p><button class="btn btn-danger"><img src="./assets/icons/trash.svg" rel="delete" width="20vw" height="auto"></button></p></td>
-                    </tr>
-                    <tr>
-                        <td class="t-data">Helo</td>
-                        <td class="t-data">Helo</td>
-                        <td class="t-data">Helo</td>
-                        <td class="t-data"><p><button class="btn btn-success"><img src="./assets/icons/check.svg" rel="check" width="20vw" height="auto"></button></p></td>
-                        <td class="t-data"><p><button class="btn btn-danger"><img src="./assets/icons/trash.svg" rel="delete" width="20vw" height="auto"></button></p></td>
-                    </tr>
-                    <tr>
-                        <td class="t-data">Helo</td>
-                        <td class="t-data">Helo</td>
-                        <td class="t-data">Helo</td>
-                        <td class="t-data"><p><button class="btn btn-success"><img src="./assets/icons/check.svg" rel="check" width="20vw" height="auto"></button></p></td>
-                        <td class="t-data"><p><button class="btn btn-danger"><img src="./assets/icons/trash.svg" rel="delete" width="20vw" height="auto"></button></p></td>
-                    </tr>
-            </table>
-            <caption>
-                Reading is good
-            </caption>
+                </tbody>
+            </table> -->
         </main>
     </div>
 </body>
