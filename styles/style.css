@@ -62,8 +62,12 @@ aside {
         flex-direction: column;
         justify-items: center;
 
-        & label:not(label:last-of-type) {
+        & label {
             text-align: right;
+        }
+
+        & label:last-of-type {
+            text-align: center;
         }
 
         & input:not(input[type="checkbox"]), & button {
@@ -122,14 +126,13 @@ main {
             & > td, & > th {
                 width: 20%;
                 text-align: center;
+                border: none;
             }
 
-            & > td:not(.t-data:last-of-type) {
+            & > td:not(td:last-of-type) {
                 border-right: 2px solid black;
             }
         }
-
-
 
         & > tbody {
             max-height: 50vh;

@@ -31,8 +31,11 @@
                     <input id="pages" type="number" required min="10">
                 </label>
                 <label for="read">
-                    <input type="checkbox" id="read" name="completed"  required>
-                    <span>Did you finished the book? </span>
+                    <span>Status</span>
+                    <select name="status" id="status" >
+                        <option value="read">Read</option>
+                        <option value="not read">Not read</option>
+                    </select>
                 </label>
                 <button type="submit">Add New Book</button>
             </form>
@@ -64,6 +67,7 @@
                     </tr>
                 </thead>
              </table>
+                <p id="statement" style="text-align: center; font-weight: bold;"><i>No books added fot the momment</i></p>
         </main>
     </div>
 </body>
