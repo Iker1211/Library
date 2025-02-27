@@ -84,7 +84,7 @@ aside {
             background-color: color-mix(in srgb, var(--green), transparent 80%);
         }
 
-        &  input:user-invalid {
+        &  input:focus-invalid {
             border: 3px solid red;
             background-color: color-mix(in srgb, var(--red), transparent 80%);
         }

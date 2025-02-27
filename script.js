@@ -16,8 +16,6 @@ table.appendChild(tbody);
 
 setAttributes(table, {"class": "table table-light"}); // Adding Bootstrap classes //
 
-
-
 const listener = form.addEventListener("submit", function(event) {
 
     event.preventDefault();
@@ -25,6 +23,7 @@ const listener = form.addEventListener("submit", function(event) {
     statement.style.display = 'none';
 
     addBookToLibrary();
+    empty_form();
     render();
     console.log(my_library);
     // let tr_elem = document.createElement("tr");
@@ -78,6 +77,13 @@ function chageStatus(book) {
         library[book].status = "not read";
       } else library[book].status = "read";
 }
+
+function empty_form() {
+ $name.value = '';
+ $author.value = '';
+ $nr_pages.value = '';
+ $status.value = 'read';
+} 
 
 function render() {
     // checkLocalStorage();
