@@ -126,6 +126,15 @@ function changeStatus(book) {
 function deleteBook(currentBook) {
     my_library.splice(currentBook, currentBook + 1);
     nr_books.textContent = my_library.length;
+
+    if (read_ones.length > 0) {
+      read_ones.pop();
+    }
+    if (unread_ones.length > 0) {
+      unread_ones.pop();
+    }
+
+    updateBookCounters();
 }
 
 function findBook(libraryArray, name) {
