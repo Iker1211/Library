@@ -21,7 +21,7 @@ body {
     height: 100vh;
     background-image: url(../assets/background-images/ryunosuke-kikuno.jpg);
     background-size: cover;
-    background-repeat: no-repeat;
+    background-repeat: repeat;
 }
 
 .container {
@@ -107,6 +107,17 @@ main {
     flex-direction: column;
     justify-content: center;
     align-content: center;
+
+    & > .library-info {
+        display: flex;
+        justify-content: space-between;
+        padding: 1rem;
+
+        & > .info {
+            display: flex;
+            flex-direction: column;
+        }
+    }
 
     & > table {
         width: 95%;

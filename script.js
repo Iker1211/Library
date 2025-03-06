@@ -7,6 +7,10 @@ function setAttributes(el, attrs) {
 
 const form = document.getElementById("form");
 const main = document.querySelector("main");
+const info_table = document.getElementsByClassName("library-info");
+const nr_books = document.getElementById("n_books");
+const read_books = document.getElementById("read_books");
+const unread_books = document.getElementById("unread_books");
 const table = document.createElement("table");
 const tbody = document.createElement("tbody");
 const statement = document.getElementById("statement");
@@ -30,7 +34,7 @@ table.addEventListener("click", (e) => {
 
     const currentTarget = e.target.parentNode.parentNode.childNodes[1];
     if (e.target.innerHTML == "delete") {
-      if (confirm(`are you sure you want to delete ${currentTarget.innerText}`))
+      if (confirm(`are you sure you want to delete ${currentTarget.innerText} ?`))
         deleteBook(findBook(my_library, currentTarget.innerText));
     }
     if (e.target.classList.contains("status-button")) {
@@ -45,7 +49,7 @@ function empty_form() {
     $author.value = '';
     $nr_pages.value = '';
     $status.value = 'read';
-   } 
+} 
    
 function render() {
     tbody.innerHTML = "";
@@ -55,7 +59,7 @@ function render() {
             <td>${book.name}</td>
             <td>${book.author}</td>
             <td>${book.nr_pages}</td>
-            <td><button class="btn btn-success status-button">${book.status}</button></td>
+            <td><button class="btn btn-warning status-button">${book.status}</button></td>
             <td><button class="btn btn-danger">delete</button></td>
         </tr>
         `;
@@ -65,6 +69,8 @@ function render() {
 
 /* Book structures that hold all information */
 const my_library = [];
+const read_ones = [];
+const unread_ones = [];
 
 const $name = document.getElementById("title");
 const $author = document.getElementById("author");
@@ -80,20 +86,46 @@ class Book {
     }
 }
 
+function updateBookCounters() {
+  read_books.textContent = read_ones.length;
+  unread_books.textContent = unread_ones.length;
+}
+
 function addBookToLibrary() {
     const new_book = new Book($name.value, $author.value, $nr_pages.value, $status.value);
     my_library.push(new_book);
     updateLocalStorage();
+    nr_books.textContent = my_library.length;
+
+    if (new_book.status === "read") {
+      read_ones.push(" ");
+  } else {
+      unread_ones.push(" ");
+  }
+
+  updateBookCounters();
 }
 
 function changeStatus(book) {
+
     if (my_library[book].status === "read") {
         my_library[book].status = "not read";
-      } else my_library[book].status = "read";
+
+        read_ones.pop();
+        unread_ones.push(" ");
+      } else  {
+        my_library[book].status = "read"
+
+        unread_ones.pop();
+        read_ones.push(" ");
+      };
+
+    updateBookCounters();
 }
 
 function deleteBook(currentBook) {
     my_library.splice(currentBook, currentBook + 1);
+    nr_books.textContent = my_library.length;
 }
 
 function findBook(libraryArray, name) {
@@ -108,7 +140,7 @@ function findBook(libraryArray, name) {
 
 function updateLocalStorage() {
     localStorage.setItem("my_library", JSON.stringify(my_library));
-  }
+}
 
 function checkLocalStorage() {
     if (localStorage.getItem("library")) {
@@ -119,6 +151,7 @@ function checkLocalStorage() {
   }
 
 render();
+
 
 
 
